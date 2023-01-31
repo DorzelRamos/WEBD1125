@@ -55,12 +55,14 @@ $color6: rgb(255,255,255);
 main {
     position: relative;
     div#mContainer {
+        height: 79vh;
+        width: 50%;
         margin-left: auto;
         color: $color6;
         border: 0.85mm solid $color6;
         border-style: solid none;
-        height: 79vh;
-        width: 50%;
+        // border-top: dashed;
+        //testing individual border styles
     }
 
 }
