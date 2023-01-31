@@ -2,9 +2,8 @@
 * {
   padding: 0%;
   margin: 0%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 #container {
@@ -12,7 +11,6 @@
   width: 100%;
   height: 100vh;
 }
-
 #container .bars {
   width: 4em;
   fill: white;
@@ -32,5 +30,4 @@
   color: blue;
 }
 
-/* can add hover and active */
-/*# sourceMappingURL=style.css.map */
+/* can add hover and active *//*# sourceMappingURL=style.css.map */
