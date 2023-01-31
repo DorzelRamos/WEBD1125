@@ -46,8 +46,9 @@ main {
   position: relative;
 }
 main div#mContainer {
+  color: rgb(255, 255, 255);
   border: 1em solid rgb(255, 255, 255);
-  height: 90%;
+  height: 81vh;
 }
 
 footer {
