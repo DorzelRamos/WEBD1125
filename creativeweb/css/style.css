@@ -48,11 +48,16 @@ main {
 }
 main div#mContainer {
   height: 79vh;
-  width: 90%;
-  margin: auto;
+  width: 50%;
+  margin-left: auto;
   color: rgb(255, 255, 255);
   border: 0.85mm solid rgb(255, 255, 255);
   border-style: solid none;
+}
+main div#mContainer img {
+  width: 90%;
+  margin: 2em;
+  float: right;
 }
 
 footer {
@@ -62,4 +67,6 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: rgb(54, 40, 129);
+  color: rgb(129, 113, 6);
+  font-size: 2em;
 }/*# sourceMappingURL=style.css.map */
