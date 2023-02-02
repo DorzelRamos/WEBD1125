@@ -48,8 +48,8 @@ main {
 }
 main div#mContainer {
   height: 79vh;
-  width: 50%;
-  margin-left: auto;
+  width: 90%;
+  margin: auto;
   color: rgb(255, 255, 255);
   border: 0.85mm solid rgb(255, 255, 255);
   border-style: solid none;
