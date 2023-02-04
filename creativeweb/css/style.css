@@ -32,7 +32,6 @@
   display: flex;
   list-style: none;
   margin-left: auto;
-  margin-right: 5%;
 }
 #container nav ul li {
   padding: 0 1em;
@@ -47,19 +46,26 @@
 main {
   position: relative;
 }
-main div#mContainer {
+main .column {
+  float: left;
+  width: 50%;
+}
+main .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+main div#rightSide {
   height: 79vh;
-  width: 47.5%;
-  margin-left: 45.5%;
   color: rgb(255, 255, 255);
   border: 0.85mm solid rgb(255, 255, 255);
   border-style: solid none;
-  border-bottom: none;
 }
 main img {
   position: relative;
   z-index: 2;
   width: 105%;
+  margin-left: -2.5%;
   height: 64vh;
   padding: 1em;
 }
@@ -71,11 +77,13 @@ main #sectSynop {
 }
 main h4 {
   margin-top: -2.2em;
+  margin-right: 2em;
   font-size: x-large;
   color: rgb(129, 113, 6);
   background-color: rgb(255, 255, 255);
 }
 main p {
+  margin-right: 3em;
   background-color: rgb(255, 255, 255);
   color: rgb(22, 16, 56);
   font-weight: 700;
@@ -85,6 +93,7 @@ main #circ1 {
   z-index: 1;
   float: left;
   margin-left: -7%;
+  margin-top: -2em;
   padding: 0%;
   height: 15em;
   width: 15em;
@@ -92,41 +101,17 @@ main #circ1 {
   background-color: rgb(129, 113, 6);
 }
 
-div#circ2 {
-  display: flex;
-  padding: 1em;
-  align-items: center;
-  height: 100px;
-  width: 50px;
-  border-radius: 55%;
-  background-color: rgb(54, 40, 129);
+div#leftSide {
+  height: 79vh;
+  width: 47.5%;
+  color: rgb(255, 255, 255);
+  border: 0.85mm solid rgb(255, 255, 255);
+  border-style: solid none;
+  border-top: none;
 }
 
-div#rect1 {
-  display: flex;
-  padding: 1em;
-  align-items: center;
-  width: 100px;
-  height: 50px;
-  background-color: rgb(255, 255, 255);
-}
-
-div#rect2 {
-  display: flex;
-  padding: 1em;
-  align-items: center;
-  width: 100px;
-  height: 50px;
-  background-color: rgb(101, 101, 101);
-}
-
-div#rect3 {
-  display: flex;
-  padding: 1em;
-  align-items: center;
-  width: 100px;
-  height: 50px;
-  background-color: rgb(56, 51, 16);
+#design {
+  font-size: xx-large;
 }
 
 footer {
