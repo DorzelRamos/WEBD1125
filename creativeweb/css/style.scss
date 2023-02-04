@@ -38,6 +38,8 @@ $color6: rgb(255,255,255);
             display: flex;
             list-style: none;
             margin-left: auto;
+            //added margin-right
+            margin-right: 5%;
             li {
                 //for padding the first number is top and bottom, next is left and right
                 padding: 0 1em;
@@ -56,46 +58,88 @@ main {
     position: relative;
     div#mContainer {
         height: 79vh;
-        width: 50%;
-        margin-left: auto;
+        width: 47.5%;
+        margin-left: 45.5%;
         color: $color6;
         border: 0.85mm solid $color6;
         border-style: solid none;
-        // }
+        border-bottom: none;
+        }
         // border-top: dashed;
         // testing individual border styles
         // use SVG line instead?
         img {
-            display:flex;
-            justify-content: auto;
-            width: 97%;
-            margin: 2em;
-            float: right;
+            position: relative;
+            z-index: 2;
+            width: 105%;
+            height: 64vh;
+            padding: 1em;
+            // float: left;
+            // scale: 103%;
         }
+
+        #sectSynop {
+            position: absolute;
+            z-index: 0;
+            margin-top: 2em;
+            width: 50%;
+        }
+
         h4 {
             //you loose the top border this way, make ajustments?
+            // height: 50%;
+            // position: relative;
+            // z-index: 0;
+            margin-top: -2.2em;
             font-size: x-large;
             color: $color1;
             background-color: $color6;
         }
+
         p {
+            // position: relative;
             background-color: $color6;
             color: $color3;
             font-weight: 700;
         }
 
+        #circ1 {
+            //absolute position can overlap
+            position: absolute;
+            z-index: 1;
+            float: left;
+            margin-left: -7%;
+            // margin-top: -4%;
+            padding: 0%;
+            // display: flex;
+            // padding: 1em;
+            // align-items: auto;
+            height: 15em;
+            width: 15em;
+            border-radius: 55%;
+            background-color: $color1;
+        }
+
 } //mContainer div ends here
 
 //circles below
-div#circ1 {
-    display: flex;
-    padding: 1em;
-    align-items: center;
-    height: 100px;
-    width: 50px;
-    border-radius: 55%;
-    background-color: goldenrod
-}
+// #circ1 {
+//     //absolute position can overlap
+//     position: absolute;
+//     z-index: 1;
+//     float: left;
+//     margin-left: 39%;
+//     margin-top: -4%;
+//     // margin-top:10%;
+//     padding: 0%;
+//     // display: flex;
+//     // padding: 1em;
+//     // align-items: auto;
+//     height: 15em;
+//     width: 15em;
+//     border-radius: 55%;
+//     background-color: $color1;
+// }
 div#circ2 {
     display: flex;
     padding: 1em;
@@ -132,11 +176,11 @@ div#rect3 {
     background-color: $color5;
 } //rectangles end here
 
-} //main ends here
+ //main ends here
 
 footer {
     height: 100px;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: $color4;

@@ -32,6 +32,7 @@
   display: flex;
   list-style: none;
   margin-left: auto;
+  margin-right: 5%;
 }
 #container nav ul li {
   padding: 0 1em;
@@ -48,39 +49,50 @@ main {
 }
 main div#mContainer {
   height: 79vh;
-  width: 50%;
-  margin-left: auto;
+  width: 47.5%;
+  margin-left: 45.5%;
   color: rgb(255, 255, 255);
   border: 0.85mm solid rgb(255, 255, 255);
   border-style: solid none;
+  border-bottom: none;
 }
-main div#mContainer img {
-  display: flex;
-  justify-content: auto;
-  width: 97%;
-  margin: 2em;
-  float: right;
+main img {
+  position: relative;
+  z-index: 2;
+  width: 105%;
+  height: 64vh;
+  padding: 1em;
 }
-main div#mContainer h4 {
+main #sectSynop {
+  position: absolute;
+  z-index: 0;
+  margin-top: 2em;
+  width: 50%;
+}
+main h4 {
+  margin-top: -2.2em;
   font-size: x-large;
   color: rgb(129, 113, 6);
   background-color: rgb(255, 255, 255);
 }
-main div#mContainer p {
+main p {
   background-color: rgb(255, 255, 255);
   color: rgb(22, 16, 56);
   font-weight: 700;
 }
-main div#circ1 {
-  display: flex;
-  padding: 1em;
-  align-items: center;
-  height: 100px;
-  width: 50px;
+main #circ1 {
+  position: absolute;
+  z-index: 1;
+  float: left;
+  margin-left: -7%;
+  padding: 0%;
+  height: 15em;
+  width: 15em;
   border-radius: 55%;
-  background-color: goldenrod;
+  background-color: rgb(129, 113, 6);
 }
-main div#circ2 {
+
+div#circ2 {
   display: flex;
   padding: 1em;
   align-items: center;
@@ -89,7 +101,8 @@ main div#circ2 {
   border-radius: 55%;
   background-color: rgb(54, 40, 129);
 }
-main div#rect1 {
+
+div#rect1 {
   display: flex;
   padding: 1em;
   align-items: center;
@@ -97,7 +110,8 @@ main div#rect1 {
   height: 50px;
   background-color: rgb(255, 255, 255);
 }
-main div#rect2 {
+
+div#rect2 {
   display: flex;
   padding: 1em;
   align-items: center;
@@ -105,7 +119,8 @@ main div#rect2 {
   height: 50px;
   background-color: rgb(101, 101, 101);
 }
-main div#rect3 {
+
+div#rect3 {
   display: flex;
   padding: 1em;
   align-items: center;
@@ -116,7 +131,7 @@ main div#rect3 {
 
 footer {
   height: 100px;
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-color: rgb(54, 40, 129);
