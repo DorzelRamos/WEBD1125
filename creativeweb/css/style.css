@@ -170,4 +170,31 @@ footer span.info {
   margin-left: 30em;
   margin-top: -2em;
   color: rgb(255, 255, 255);
+}
+footer span.faceBook {
+  display: block;
+  justify-content: center;
+  width: 3em;
+  height: 10px;
+  margin-left: 104em;
+  margin-top: -3em;
+  fill: rgb(255, 255, 255);
+}
+footer span.twitter {
+  display: block;
+  justify-content: center;
+  width: 3em;
+  height: 10px;
+  margin-left: 108em;
+  margin-top: -0.5em;
+  fill: rgb(255, 255, 255);
+}
+footer span.linkedIn {
+  display: block;
+  justify-content: center;
+  width: 3em;
+  height: 10px;
+  margin-left: 112em;
+  margin-top: -1em;
+  fill: rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */

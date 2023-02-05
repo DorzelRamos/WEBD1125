@@ -207,4 +207,31 @@ footer {
         margin-top: -2em;
         color: $color6
         }
+    span.faceBook {
+        display:block;
+        justify-content: center;
+        width: 3em;
+        height: 10px;
+        margin-left: 104em;
+        margin-top: -3em;
+        fill:$color6;
+    }
+    span.twitter {
+        display:block;
+        justify-content: center;
+        width: 3em;
+        height: 10px;
+        margin-left: 108em;
+        margin-top: -0.5em;
+        fill:$color6;
+    }
+    span.linkedIn {
+        display:block;
+        justify-content: center;
+        width: 3em;
+        height: 10px;
+        margin-left: 112em;
+        margin-top: -1em;
+        fill:$color6;
+    }
 }
