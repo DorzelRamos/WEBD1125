@@ -143,7 +143,7 @@ div#leftSide {
     border: 0.85mm solid $color6;
     border-style: solid none;
     border-top: none;
-    }
+
     .word {
         position: absolute;
         z-index: 1;
@@ -175,65 +175,36 @@ div#leftSide {
     #darkYell {
 
         background-color: $color5;
-        margin-top: 155px;
+        margin-top: 118px;
+        margin-left: 180px;
     }
     #create {
         margin-top: 1px;
     }
     #asthe {
-        margin-top: 2px;
+        margin-top: 1px;
+    } //leftSide ends here
     }
-
-
-
-
-//circles below
-// div#circ2 {
-//     display: flex;
-//     padding: 1em;
-//     align-items: center;
-//     height: 100px;
-//     width: 50px;
-//     border-radius: 55%;
-//     background-color: $color4;
-// } 
-//circles end here
-
-//rectangles below
-// div#rect1 {
-//     display: flex;
-//     padding: 1em;
-//     align-items: center;
-//     width: 100px;
-//     height: 50px;
-//     background-color: $color6;
-// }
-// div#rect2 {
-//     display: flex;
-//     padding: 1em;
-//     align-items: center;
-//     width: 100px;
-//     height: 50px;
-//     background-color: $color2;
-// }
-// div#rect3 {
-//     display: flex;
-//     padding: 1em;
-//     align-items: center;
-//     width: 100px;
-//     height: 50px;
-//     background-color: $color5;
-// } //rectangles end here
-
- //main ends here
 
 footer {
     height: 100px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: $color4;
-    color: $color1;
-    font-size: 2em;
-
+    span.copy {
+        display:flex;
+        justify-content: left;
+        font-size: 2em;
+        color: $color1;
+        margin-left: 100px;
+    }
+    span.info {
+        display:block;
+        justify-content: center;
+        font-size: large;
+        margin-left: 30em;
+        margin-top: -2em;
+        color: $color6
+        }
 }

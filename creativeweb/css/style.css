@@ -109,8 +109,7 @@ div#leftSide {
   border-style: solid none;
   border-top: none;
 }
-
-.word {
+div#leftSide .word {
   position: absolute;
   z-index: 1;
   height: 1px;
@@ -119,8 +118,7 @@ div#leftSide {
   margin-top: 2em;
   font-size: 60px;
 }
-
-.square {
+div#leftSide .square {
   position: relative;
   width: 250px;
   height: 40px;
@@ -128,39 +126,48 @@ div#leftSide {
   margin-left: 5em;
   margin-top: 6em;
 }
-
-#white {
+div#leftSide #white {
   position: fixed;
   width: 350px;
   height: 350px;
   z-index: 0;
   margin-top: 10em;
 }
-
-#grey {
+div#leftSide #grey {
   background-color: rgb(101, 101, 101);
   margin-top: 14em;
 }
-
-#darkYell {
+div#leftSide #darkYell {
   background-color: rgb(56, 51, 16);
-  margin-top: 155px;
+  margin-top: 118px;
+  margin-left: 180px;
 }
-
-#create {
+div#leftSide #create {
   margin-top: 1px;
 }
-
-#asthe {
-  margin-top: 2px;
+div#leftSide #asthe {
+  margin-top: 1px;
 }
 
 footer {
   height: 100px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: rgb(54, 40, 129);
-  color: rgb(129, 113, 6);
+}
+footer span.copy {
+  display: flex;
+  justify-content: left;
   font-size: 2em;
+  color: rgb(129, 113, 6);
+  margin-left: 100px;
+}
+footer span.info {
+  display: block;
+  justify-content: center;
+  font-size: large;
+  margin-left: 30em;
+  margin-top: -2em;
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */
