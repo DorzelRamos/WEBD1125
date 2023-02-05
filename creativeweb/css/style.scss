@@ -144,30 +144,46 @@ div#leftSide {
     border-style: solid none;
     border-top: none;
     }
-    .boxed {
-        margin-left: 2em;
+    .word {
+        position: absolute;
+        z-index: 1;
+        height: 1px;
+        color: $color1;
+        margin-left: 1em;
+        margin-top: 2em;
+        font-size: 60px;
     }
     .square {
-        width: 350px;
-        height: 350px;
+        position: relative;
+        width: 250px;
+        height: 40px;
         background-color: $color6;
         margin-left: 5em;
+        margin-top: 6em;
     }
-    #design {
-        position: relative;
-        color: $color1;
-        font-size: 2.75em;
+    #white {
+        position: fixed;
+        width: 350px;
+        height: 350px;
+        z-index: 0;
+        margin-top: 10em;
     }
     #grey {
-        width: 250px;
-        height: 50px;
         background-color: $color2;
+        margin-top: 14em;
     }
     #darkYell {
-        width: 250px;
-        height: 50px;
+
         background-color: $color5;
+        margin-top: 155px;
     }
+    #create {
+        margin-top: 1px;
+    }
+    #asthe {
+        margin-top: 2px;
+    }
+
 
 
 
