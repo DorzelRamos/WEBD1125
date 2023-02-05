@@ -110,8 +110,33 @@ div#leftSide {
   border-top: none;
 }
 
+.boxed {
+  margin-left: 2em;
+}
+
+.square {
+  width: 350px;
+  height: 350px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 5em;
+}
+
 #design {
-  font-size: xx-large;
+  position: relative;
+  color: rgb(129, 113, 6);
+  font-size: 2.75em;
+}
+
+#grey {
+  width: 250px;
+  height: 50px;
+  background-color: rgb(101, 101, 101);
+}
+
+#darkYell {
+  width: 250px;
+  height: 50px;
+  background-color: rgb(56, 51, 16);
 }
 
 footer {
