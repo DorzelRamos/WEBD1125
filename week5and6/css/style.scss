@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+#container {
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
+    .bkgd {
+        height: 128px;
+    }
+    #multi-bkgd {
+        background-image:url("../images/boxes.svg"),url("../images/gradients.svg");
+        background-position: right bottom, left top;
+        background-repeat: no-repeat, repeat;
+    }
+    #bkgd-size {
+        background-image:url("../images/boxes.svg");
+        background-repeat: no-repeat;
+        background-size: 64px 64px;
+        background-color: deepskyblue;
+    }
+    #large-imgs {
+        display: flex;
+        width: 100%;
+        height: 400px;
+        background-color: tomato;
+        section {
+            width:50%;
+            height:100%;
+        }
+        #large-imgs-1 {
+            background-image:url("../images/boxes.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        #large-imgs-2 {
+            background-image:url("../images/boxes.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /*
+        contain = fitting the image to parents size
+        cover = covering whole thing
+        */
+    }
+}
+
+#container2 {
+    // width: 100vw;
+    // height: 100vh;
+    background-color: grey;
+    background-image: url("../images/technology.jpeg");
+    background-size: cover;
+    position: relative;
+    h1 {
+        font-size: 5em;
+        text-transform:uppercase;
+        color: red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // text-align: center;
+
+    }
+}
+
+#container3 {
+    background-image: linear-gradient(45deg, red, orange, yellow, green,violet);
+}
+
+#container4 {
+    background-image: radial-gradient(circle, red, orange, yellow, green,violet);
+}
+
+#container5 {
+    .gallery {
+        float: left;
+        width: calc(100vw/4);
+        padding: 1em;
+        a {
+            img {
+                width: 80%;
+                height: auto;
+            }
+        }
+    }
+    }
+// }
