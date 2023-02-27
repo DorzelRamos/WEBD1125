@@ -12,4 +12,117 @@
   height: 100vh;
   background-color: red;
 }
+
+.container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2em;
+}
+
+.container nav span {
+  text-transform: uppercase;
+}
+
+.container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  list-style: none;
+}
+
+.container nav ul li a {
+  display: inline-block;
+  padding: 0 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: red;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+
+.container nav ul li a:hover {
+  color: black;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+  .container nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    background-color: transparent;
+  }
+  .container nav span {
+    display: inline-block;
+    padding: 0 1em;
+    width: 100%;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  .container nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container nav ul li {
+    text-align: center;
+    margin: 0.5em 1em;
+  }
+  .container nav ul li a {
+    color: white;
+  }
+}
+
+li#gallery {
+  position: relative;
+}
+
+ul#gallery-drp {
+  display: none;
+  position: absolute;
+  top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+}
+
+ul#gallery-drp li {
+  padding: 1em 0;
+}
+
+li#gallery:hover ul#gallery-drp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 /*# sourceMappingURL=style.css.map */
