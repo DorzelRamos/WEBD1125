@@ -77,19 +77,18 @@
 li#gallery {
     position: relative
 }
-ul#gallery-drp {
+ul#gallery-drop {
     display: none;
     position: absolute;
     top: 2em;
-    display: flex;
-    flex-direction: column;
+    //duplication problem, don't put display:flex and flex-direction:column
     background-color: white;
     li {
         padding: 1em 0;
     }
 }
 
-li#gallery:hover ul#gallery-drp {
+li#gallery:hover ul#gallery-drop {
     display: flex;
     flex-direction: column;
 }
