@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+$greenColor: rgba(150, 200, 100, 1);
+$whiteColor: rgba(255, 255, 255, 1);
+$grayColor: rgba(128, 128, 128, 1);
+$lightGrayColor: rgba(128, 128, 128, 0.5);
+$blueColor: rgba(0, 0, 255, 1); //you can make colors without using css ones
+$radius: 0.2rem; //you can make your own variables to
+
+// svg#infinity {
+//     height: 50px;
+// }
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: $whiteColor;
+
+    .nav {
+        position: fixed;
+        width: 100vw;
+        box-shadow: 0 0 10px $grayColor;
+
+        &__list {
+            //same as .nav__list but looks for __list items
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 2rem;
+            margin: 0 2rem;
+
+            &logo {
+                //.nav__listlogo {
+                list-style: none;
+                margin-right: auto;
+                cursor: pointer;
+
+                // svg#infinity
+                svg {
+                    width: 2rem;
+                    transition: fill 250ms ease-in;
+
+                    &:hover,
+                    &:focus {
+                        fill: $grayColor;
+                    }
+                }
+            }
+
+            &item {
+                list-style: none;
+                font-weight: bold;
+                position: relative;
+                padding: 1.5rem 1rem;
+                cursor: pointer;
+
+                &::after {
+                    content: "";
+                    width: 0;
+                    height: 0.3rem;
+                    border-radius: $radius;
+                    position: absolute;
+                    left: 1rem;
+                    bottom: 0.8rem;
+                    background-color: $greenColor;
+                    transition: width 200ms ease-in;
+                }
+
+                &:hover::after,
+                &:focus::after {
+                    width: 80%;
+                }
+
+                &:hover ul,
+                &:focus ul {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                &drop {
+                    position: absolute;
+                    top: 4rem;
+                    left: -1rem;
+                    box-shadow: 0 0 10px $grayColor;
+                    background-color: $whiteColor;
+                    border-radius: $radius;
+                    width: 12rem;
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 200ms ease-in-out;
+
+                    li {
+                        list-style: none;
+                        padding: 0.5rem;
+                        border-radius: $radius;
+                        transition: background-color 200ms ease-in-out;
+
+                        &:hover,
+                        &:focus {
+                            background-color: $lightGrayColor;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
