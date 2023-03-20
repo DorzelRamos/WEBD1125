@@ -29,6 +29,7 @@ $radius: 0.2rem; //you can make your own variables to
 
     .nav {
         position: fixed;
+        z-index:1;
         width: 100vw;
         box-shadow: 0 0 10px $grayColor;
 
@@ -127,11 +128,11 @@ $radius: 0.2rem; //you can make your own variables to
         background-color: $whiteColor;
         position: relative;
         top: 67px;
-        z-index: -1;
+        // z-index: -1;
         display: flex;
         justify-content: center;
         // align-items: center;
-        section { //the box surrounding the whole contact form
+        section#main-section { //the box surrounding the whole contact form
             position: relative;
             top: 3rem;
             width: 80%;
@@ -139,10 +140,51 @@ $radius: 0.2rem; //you can make your own variables to
             background-color: $greenColor;
             padding: 3rem;
             border-radius: 1rem;
+            overflow: hidden;
             h1 {
                 color: $whiteColor;
                 font-size: 2.5rem;
             }
+            div#main-section-div {
+                height: 70%;
+                width: 100%;
+                position: relative;
+            section#Img1 {
+                height: 70%;
+                width: 100%;
+                background-color: red;
+                position: relative;
+                background-image:url(../images/cityscape.jpg);
+                background-size: contain;
+            }
+            img#city {
+                width: 100%;
+                // filter: invert(100%);
+
+            }
+            img#city:hover { //this one gives the image the fade
+                transition: filter 200ms ease-in;
+                cursor: pointer;
+                filter: sepia(100%);
+            }
+            section#Img1-text {
+                // height: 20%;
+                // width: 100%;
+                // background-color: white;
+                padding: 0;
+                border-radius: $radius;
+                font-size: 4em;
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                transform: translate;
+                transform: translate (-50%, -50%); //if I used iamge element
+                // transform: translate (-50%, -90%); if I used the Img1 section
+                color: $whiteColor;
+                text-align: center;
+                text-shadow: 4px 4px 10px #000;
+            }
+        }
             form {
                 // margin-top: 1rem;
                 width: 100%;
