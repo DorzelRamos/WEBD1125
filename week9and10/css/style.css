@@ -145,6 +145,7 @@ a {
   padding: 3rem;
   border-radius: 1rem;
   overflow: hidden;
+  min-height: 729px;
 }
 
 .container main section#main-section h1 {
@@ -161,10 +162,11 @@ a {
 .container main section#main-section div#main-section-div section#Img1 {
   height: 70%;
   width: 100%;
-  background-color: red;
   position: relative;
   background-image: url(../images/cityscape.jpg);
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 0.2rem 1px solid white;
 }
 
 .container main section#main-section div#main-section-div img#city {
@@ -188,13 +190,57 @@ a {
   position: absolute;
   top: 50%;
   left: 30%;
-  -webkit-transform: translate;
-          transform: translate;
   -webkit-transform: translate -50%, -50%;
           transform: translate -50%, -50%;
   color: white;
   text-align: center;
   text-shadow: 4px 4px 10px #000;
+}
+
+.container main section#main-section div#main-section-div section#main-section-div-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 2em;
+}
+
+.container main section#main-section div#main-section-div section#main-section-div-section figure {
+  background-color: white;
+  width: 30%;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.container main section#main-section div#main-section-div section#main-section-div-section figure img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  -webkit-transition: -webkit-filter 250ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-filter 250ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: filter 250ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: filter 250ms cubic-bezier(0.19, 1, 0.22, 1), -webkit-filter 250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.container main section#main-section div#main-section-div section#main-section-div-section figure figcaption {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.container main section#main-section div#main-section-div section#main-section-div-section figure figcaption p {
+  text-align: left;
+  padding: 1rem;
+}
+
+.container main section#main-section div#main-section-div section#main-section-div-section figure:hover img {
+  -webkit-filter: sepia(100%);
+          filter: sepia(100%);
+}
+
+.container main section#main-section div#main-section-div section#main-section-div-section figure:hover {
+  -webkit-box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
 }
 
 .container main section#main-section form {
@@ -214,20 +260,33 @@ a {
   margin: 1rem 0;
 }
 
-.container main section#main-section form input[type=text], .container main section#main-section form input[type=email], .container main section#main-section form textarea {
-  color: gray;
+.container main section#main-section form input[type=text],
+.container main section#main-section form input[type=email],
+.container main section#main-section form textarea {
   font-size: 1.25rem;
   padding: 0.5rem 0;
   border-radius: 0.2rem;
   border: none;
+  background-color: gray;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.container main section#main-section form input[type=text]:focus,
+.container main section#main-section form input[type=email]:focus,
+.container main section#main-section form textarea:focus {
+  border: none;
+  outline: 0;
+  background-color: white;
 }
 
 .container main section#main-section form textarea {
   height: 200px;
   margin-bottom: 1rem;
+  color: white;
 }
 
-.container main section#main-section form button {
+.container main section#main-section form button#button {
   background-color: white;
   color: #96c864;
   font-size: 1.5rem;
@@ -237,6 +296,14 @@ a {
   border: none;
   display: inline-block;
   margin: 1rem auto 0 auto;
+  -webkit-transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+
+.container main section#main-section form button#button:hover {
+  background-color: gray;
+  color: white;
 }
 
 .container footer {

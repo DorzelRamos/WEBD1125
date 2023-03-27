@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -17,6 +18,7 @@ $grayColor: rgba(128, 128, 128, 1);
 $lightGrayColor: rgba(128, 128, 128, 0.5);
 $blueColor: rgba(0, 0, 255, 1); //you can make colors without using css ones
 $radius: 0.2rem; //you can make your own variables to
+$radius1: 1rem;
 
 // svg#infinity {
 //     height: 50px;
@@ -29,7 +31,7 @@ $radius: 0.2rem; //you can make your own variables to
 
     .nav {
         position: fixed;
-        z-index:1;
+        z-index: 1;
         width: 100vw;
         box-shadow: 0 0 10px $grayColor;
 
@@ -131,8 +133,10 @@ $radius: 0.2rem; //you can make your own variables to
         // z-index: -1;
         display: flex;
         justify-content: center;
+
         // align-items: center;
-        section#main-section { //the box surrounding the whole contact form
+        section#main-section {
+            //the box surrounding the whole contact form
             position: relative;
             top: 3rem;
             width: 80%;
@@ -141,72 +145,143 @@ $radius: 0.2rem; //you can make your own variables to
             padding: 3rem;
             border-radius: 1rem;
             overflow: hidden;
+            min-height: 729px;
+
             h1 {
                 color: $whiteColor;
                 font-size: 2.5rem;
             }
+
             div#main-section-div {
                 height: 70%;
                 width: 100%;
                 position: relative;
-            section#Img1 {
-                height: 70%;
-                width: 100%;
-                background-color: red;
-                position: relative;
-                background-image:url(../images/cityscape.jpg);
-                background-size: contain;
-            }
-            img#city {
-                width: 100%;
-                // filter: invert(100%);
 
+                section#Img1 {
+                    height: 70%;
+                    width: 100%;
+                    // background-color: red;
+                    position: relative;
+                    background-image: url(../images/cityscape.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border: $radius 1px solid $whiteColor;
+                }
+
+                img#city {
+                    width: 100%;
+                    // filter: invert(100%);
+
+                }
+
+                img#city:hover {
+                    //this one gives the image the fade
+                    transition: filter 200ms ease-in;
+                    cursor: pointer;
+                    filter: sepia(100%);
+                }
+
+                section#Img1-text {
+                    // height: 20%;
+                    // width: 100%;
+                    // background-color: white;
+                    padding: 0;
+                    border-radius: $radius;
+                    font-size: 4em;
+                    position: absolute;
+                    top: 50%;
+                    left: 30%;
+                    // transform: translate;
+                    transform: translate (-50%, -50%); //if I used iamge element
+                    // transform: translate (-50%, -90%); if I used the Img1 section
+                    color: $whiteColor;
+                    text-align: center;
+                    text-shadow: 4px 4px 10px #000;
+                }
+
+                section#main-section-div-section {
+                    //wrapped around figure
+                    display: flex;
+                    justify-content: space-evenly;
+                    padding: 2em;
+
+                    figure {
+                        //the parent
+                        background-color: $whiteColor;
+                        width: 30%;
+                        border-radius: $radius1;
+                        cursor: pointer;
+                        // float: right;
+
+                        img {
+                            //child inherits parent stuff
+                            width: 100%;
+                            border-radius: $radius1 $radius1 0 0;
+                            transition: filter 250ms cubic-bezier(0.19, 1, 0.22, 1);
+                        }
+
+                        figcaption {
+                            text-align: center;
+                            padding: 1em 0;
+                            p{
+                                text-align: left;
+                                padding: $radius1;
+                            }
+                        }
+                    }
+
+                    figure:hover img {
+                        filter: sepia(100%);
+                    }
+
+                    figure:hover {
+                        box-shadow: $radius $radius $radius rgba(0, 0, 0, 0.4);
+                    }
+                }
             }
-            img#city:hover { //this one gives the image the fade
-                transition: filter 200ms ease-in;
-                cursor: pointer;
-                filter: sepia(100%);
-            }
-            section#Img1-text {
-                // height: 20%;
-                // width: 100%;
-                // background-color: white;
-                padding: 0;
-                border-radius: $radius;
-                font-size: 4em;
-                position: absolute;
-                top: 50%;
-                left: 30%;
-                transform: translate;
-                transform: translate (-50%, -50%); //if I used iamge element
-                // transform: translate (-50%, -90%); if I used the Img1 section
-                color: $whiteColor;
-                text-align: center;
-                text-shadow: 4px 4px 10px #000;
-            }
-        }
+
             form {
                 // margin-top: 1rem;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+
                 label {
                     color: $whiteColor;
                     font-size: 1.5rem;
                     margin: 1rem 0;
                 }
-                input[type=text], input[type=email],textarea {
-                    color: $grayColor;
+
+                input[type=text],
+                input[type=email],
+                textarea {
+                    // background-color: ;
+                    // color: $whiteColor;
                     font-size: 1.25rem;
                     padding: 0.5rem 0;
                     border-radius: $radius;
                     border: none; //this overrides what the browser is trying to do vs what the code is doing
+                    background-color: $grayColor;
+                    transition: background-color 200ms linear;
                 }
+
+                input[type=text]:focus,
+                input[type=email]:focus,
+                textarea:focus {
+                    //styling here, put :focus on all
+                    border: none;
+                    outline: 0;
+                    background-color: $whiteColor;
+                }
+
                 textarea {
                     height: 200px;
                     margin-bottom: 1rem;
+                    color: $whiteColor;
                 }
-                button { //the submit button
+
+                button#button {
+                    //the submit button
                     background-color: $whiteColor;
                     color: $greenColor;
                     font-size: 1.5rem;
@@ -216,10 +291,18 @@ $radius: 0.2rem; //you can make your own variables to
                     border: none;
                     display: inline-block;
                     margin: 1rem auto 0 auto;
+                    transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                    cursor: pointer;
+                }
+
+                button#button:hover {
+                    background-color: $grayColor;
+                    color: $whiteColor;
                 }
             }
         }
     }
+
     footer {
         background-color: red;
         height: 67px;
