@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+    --fullWidth: 100vw;
+    --fullHeight: 100vh;
+    --gradientBkgd1: #F4D03F linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+    
+    //this is an example of css variables using global scope, different from the dollar sign. Uses var();
+    --f: flex;
+    --jcc: center;
+    --aic: center;
+    --spb: space-between;
+    --twoEm: 2em;
+}
+.container {
+    --gradientBkgd2: #F4D03F linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+    //this is an example of css variable using locap scope, which can only be used in this container
+    width: var(--fullWidth);
+    height: var(--fullHeight);
+    background: var(--gradientBkgd1);
+    display: var(--f);
+    justify-content: var(--jcc);
+    justify-content: var(--spb);
+    align-items: var(--aic);
+    padding: var(--twoEm);
+    section {
+        --minWidth: 300px;
+        min-width: var(--minWidth);
+        width: 30%;
+        height: 300px;
+        background: white;
+        border-radius: var(--twoEm);
+    }
+    // section:nth-child(1) {
+    //     background-color: red;
+        
+    // }
+    // section:nth-child(2) {
+    //     background-color: green;
+    //     padding: 2em;
+    //     border: 1em solid white;
+    //     box-sizing: border-box;
+
+    // }
+}
