@@ -255,7 +255,7 @@ a {
 }
 
 .container main section#main-section form label {
-  color: white;
+  color: gray;
   font-size: 1.5rem;
   margin: 1rem 0;
 }
@@ -267,7 +267,7 @@ a {
   padding: 0.5rem 0;
   border-radius: 0.2rem;
   border: none;
-  background-color: gray;
+  background-color: #a0a0a0;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
 }
@@ -278,12 +278,13 @@ a {
   border: none;
   outline: 0;
   background-color: white;
+  color: rgba(128, 128, 128, 0.5);
 }
 
 .container main section#main-section form textarea {
   height: 200px;
   margin-bottom: 1rem;
-  color: white;
+  color: gray;
 }
 
 .container main section#main-section form button#button {
@@ -302,12 +303,12 @@ a {
 }
 
 .container main section#main-section form button#button:hover {
-  background-color: gray;
+  background-color: #a0a0a0;
   color: white;
 }
 
 .container footer {
-  background-color: red;
+  background-color: #a0a0a0;
   height: 67px;
   width: 100%;
   position: relative;

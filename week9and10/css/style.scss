@@ -245,9 +245,11 @@ $radius1: 1rem;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+                // color: #000;
 
                 label {
-                    color: $whiteColor;
+                    //color of the display names
+                    color: $grayColor;
                     font-size: 1.5rem;
                     margin: 1rem 0;
                 }
@@ -255,13 +257,14 @@ $radius1: 1rem;
                 input[type=text],
                 input[type=email],
                 textarea {
+                    //color of the labels boxes
                     // background-color: ;
                     // color: $whiteColor;
                     font-size: 1.25rem;
                     padding: 0.5rem 0;
                     border-radius: $radius;
                     border: none; //this overrides what the browser is trying to do vs what the code is doing
-                    background-color: $grayColor;
+                    background-color: rgb(160, 160, 160);
                     transition: background-color 200ms linear;
                 }
 
@@ -269,15 +272,19 @@ $radius1: 1rem;
                 input[type=email]:focus,
                 textarea:focus {
                     //styling here, put :focus on all
+                    //message textarea
                     border: none;
                     outline: 0;
                     background-color: $whiteColor;
+                    color: $lightGrayColor;
                 }
 
                 textarea {
+                    //text area for the message
                     height: 200px;
                     margin-bottom: 1rem;
-                    color: $whiteColor;
+                    color: $grayColor;
+                    // background-color: $blueColor;
                 }
 
                 button#button {
@@ -296,7 +303,7 @@ $radius1: 1rem;
                 }
 
                 button#button:hover {
-                    background-color: $grayColor;
+                    background-color: rgb(160, 160, 160);
                     color: $whiteColor;
                 }
             }
@@ -304,7 +311,7 @@ $radius1: 1rem;
     }
 
     footer {
-        background-color: red;
+        background-color: rgb(160, 160, 160);
         height: 67px;
         width: 100%;
         position: relative;
